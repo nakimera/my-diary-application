@@ -1,4 +1,45 @@
+$primary-color: #8b4513;
+
+body {
+  background-image: url(./images/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 1;
+  min-height: 100vh;
+  margin: 0;
+
+  .nav-bar {
+    background-color: $white;
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+
+    .header-brand {
+      font-family: "Special Elite", cursive;
+      font-size: 1.6em;
+      letter-spacing: 2.5px;
+      font-weight: 900;
+      color: $primary-color;
+      text-transform: uppercase;
+      display: block;
+      padding-top: 30px;
+      text-align: center;
+    }
+  }
+
+  .container {
+    width: 100%;
+    min-height: calc(100vh - 5em);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .txt-welcome {
-  color: saddlebrown;
+  color: $primary-color;
   font-size: 3em;
 }

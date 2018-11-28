@@ -1,0 +1,70 @@
+$white: #fff;
+$primary-color: #8b4513;
+
+.info-card {
+  border: solid 8px $white;
+  height: 25em;
+
+  .txt-info {
+    font-size: 3.2em;
+    text-align: center;
+    color: $white;
+    font-weight: 980;
+    font-family: "Courgette", cursive;
+    line-height: 70px;
+    letter-spacing: 1px;
+    width: 500px;
+  }
+}
+
+.container-main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  .form-auth {
+    background-color: $white;
+    width: 350px;
+    display: flex;
+    flex-flow: column;
+
+    .form-title {
+      font-size: 25px;
+      color: $primary-color;
+      font-family: "Special Elite", cursive;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    input {
+      width: 90%;
+      margin: 8px;
+      height: 2.8em;
+      border: solid 1px $primary-color;
+      padding-left: 5px;
+    }
+
+    .btn-auth {
+      width: 92%;
+      margin: 10px;
+      height: 2.8em;
+      background-color: $primary-color;
+      color: $white;
+      border: 0;
+      border-radius: 15px;
+      font-size: 12px;
+    }
+
+    .form-footer {
+      font-size: 1.1em;
+      text-align: center;
+      line-height: 1.5em;
+      font-family: cursive;
+      color: $primary-color;
+      margin: 10px;
+    }
+  }
+}

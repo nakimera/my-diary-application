@@ -1,7 +1,10 @@
 import React from 'react';
+import Register from '../components/authentication/signUp';
 
 const SignUp = () => (
-    <h1>Create a diary account</h1>
+    <React.Fragment>
+      <Register />
+    </React.Fragment>
 );
 
 export default SignUp;
