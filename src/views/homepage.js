@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HomePage = () => (
-    <h1>Welcome to your diary</h1>
+    <div className="txt-welcome">Welcome to your diary</div>
 );
 
 export default HomePage;
