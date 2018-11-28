@@ -5,4 +5,7 @@ cache:
   directories:
     - node_modules
 script:
+  - npm install coveralls
   - npm test -- --coverage
+after-success:
+  - npm run coveralls
