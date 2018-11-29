@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+@import url(https://fonts.googleapis.com/css?family=Courgette|Handlee|Merienda|Special+Elite);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.container {
+  background-color: rgb(139, 69, 19, 0.8);
+}
+
+.container-main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:focus{
+  outline: none;
+  box-shadow: none;
+}

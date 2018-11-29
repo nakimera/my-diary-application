@@ -1,1 +1,1 @@
-// This is where the action types go
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
