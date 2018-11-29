@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import NavBar from '../common/navBar';
-import AddArticleButton from '../entries/addArticleButton';
+import EntryForm from '../entries/entryForm';
 
-class HomePage extends Component {
+class AddEntry extends Component {
   render() {
     return (
       <React.Fragment>
         <NavBar />
         <div className="container">
           <div className="container-main">
-            <AddArticleButton />
+            <EntryForm />
           </div>
         </div>
       </React.Fragment>
@@ -17,4 +17,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default AddEntry;

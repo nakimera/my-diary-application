@@ -39,7 +39,7 @@ body {
   }
 }
 
-.txt-welcome {
-  color: $primary-color;
-  font-size: 3em;
+input:focus, button:focus {
+  outline: none;
+  box-shadow: none;
 }

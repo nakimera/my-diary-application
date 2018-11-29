@@ -1,0 +1,47 @@
+.fa-plus-circle {
+  color: white;
+  font-size: 4em;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.article-form {
+  background-color: white;
+  width: 80%;
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column;
+
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    color: saddlebrown;
+    font-size: 1.8em;
+  }
+
+  .text-editor {
+    width: 90%;
+    min-height: 500px;
+    margin: 10px;
+    padding: 20px;
+    border: solid 1px saddlebrown;
+  }
+
+  .text-editor:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  button {
+    border: solid 1px saddlebrown;
+    width: 6em; 
+    height: 2em; 
+    color: saddlebrown;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+}
