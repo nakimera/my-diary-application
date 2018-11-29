@@ -1,9 +1,9 @@
 import React from 'react';
 import Login from '../components/authentication/login';
 
-const UserLogin = () => (
+const UserLogin = (props) => (
     <React.Fragment>
-      <Login />
+      <Login {...props} />
     </React.Fragment>
 );
 

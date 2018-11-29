@@ -16,21 +16,23 @@ const userSignupAction = user => dispatch => {
         status: response.status
       }))
       .then((response) => {
-          const message = response.data['message']
+          const message = response.data['message'];
+          dispatch({
+            type: SIGNUP_SUCCESS,
+            payload: response.data
+          });
           if (response.status === 201) {
             toast.success(message,{
               hideProgressBar: true,
               position: toast.POSITION.TOP_CENTER,
             });
-            dispatch({
-              type: SIGNUP_SUCCESS,
-              payload: response.data
-            });
           }
+          else {
           toast.error(message,{
             hideProgressBar: true,
             position: toast.POSITION.TOP_CENTER,
           });
+        }
         }
       )
       .catch(error => {

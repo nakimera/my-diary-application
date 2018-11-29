@@ -1,9 +1,9 @@
 import React from 'react';
 import Register from '../components/authentication/signUp';
 
-const SignUp = () => (
+const SignUp = (props) => (
     <React.Fragment>
-      <Register />
+      <Register {...props}/>
     </React.Fragment>
 );
 
