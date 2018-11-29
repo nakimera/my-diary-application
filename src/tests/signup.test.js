@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import InfoCard from '../components/authentication/infoCard';
 import Register from '../components/authentication/signUp';
-import SignupForm from '../components/authentication/signupForm';
 import SignUp from '../views/signup';
 import signupReducer from '../reducers/signupReducer';
 
@@ -48,3 +47,4 @@ describe('signup reducer', () => {
             })
     })
   });
+

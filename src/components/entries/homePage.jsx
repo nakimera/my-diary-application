@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import NavBar from "../common/navBar";
-import InfoCard from './infoCard';
-import LoginForm from './loginForm';
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }
+class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
         <NavBar />
         <div className="container">
         <div className="container-main">
-            <InfoCard />
-            <LoginForm {...this.props} />
           </div></div>
       </React.Fragment>
     );
   }
 }
 
-export default Login;
+export default HomePage;
