@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import Editor from 'react-medium-editor';
+import { connect } from "react-redux";
+import addEntry from '../../actions/addEntry';
 
 class EntryForm extends Component {
 
   state = {
     title: '',
-    description: ''
+    details: ''
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.entry.entry.message === "Entry successfully added") {
+      nextProps.history.push('/homepage');
+    }
   }
 
   handleChange = (text, medium) => {
-    this.setState({description: text});
+    this.setState({details: text});
   }
 
+  
   onChange=(e)=>{
     this.setState({
         [e.target.name]:e.target.value
@@ -21,10 +30,11 @@ class EntryForm extends Component {
   handleSubmit =(e) => {
     const entry = {
         title: this.state.title,
-        description: this.state.description,
+        details: this.state.details,
     };
-    console.log(entry)
+    this.props.addEntry(entry);
     }   
+    
   render() {
     return (
       <React.Fragment>
@@ -37,7 +47,7 @@ class EntryForm extends Component {
           />
           <Editor
           className="text-editor"
-          name="description"
+          name="details"
           onChange={this.handleChange}
           options={{toolbar: {buttons: ['bold', 'italic', 'underline', 'anchor']}}}
         />
@@ -48,4 +58,12 @@ class EntryForm extends Component {
   }
 }
 
-export default EntryForm;
+const mapStateToProps = state => ({
+    entry: state.entry,
+  });
+
+export default connect(
+    mapStateToProps,
+    { addEntry }
+    )(EntryForm);  
+

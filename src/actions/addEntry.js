@@ -1,13 +1,16 @@
-import { LOGIN_USER } from './types';
-import { toast } from 'react-toastify';
+import { ADD_ENTRY } from './types';
+import { toast } from "react-toastify";
+import {token} from '../global';
 
-const userLoginAction = user => dispatch => {
-  fetch("https://my-diary-app-np.herokuapp.com/api/v1/auth/login", {
-    method: "POST",
+
+const addEntry = entry => dispatch => {
+  fetch('https://my-diary-app-np.herokuapp.com/api/v1/entries', {
+    method: 'POST',
     headers: {
-      "content-type": "application/json"
+      "content-type": "application/json",
+      'access-token': token,
     },
-    body: JSON.stringify(user)
+    body: JSON.stringify(entry)
   }).then(response =>
     response
       .json()
@@ -17,22 +20,15 @@ const userLoginAction = user => dispatch => {
       }))
       .then((response) => {
           const message = response.data['message']
-          if (response.status === 200) {
+          if (response.status === 201) {
             toast.success(message,{
               hideProgressBar: true,
               position: toast.POSITION.TOP_CENTER,
             });
-            const status = response.status;
-            user={
-              status,
-              message:response.data.message
-            }
             dispatch({
-              type: LOGIN_USER,
-              payload: user
+              type: ADD_ENTRY,
+              payload: response.data
             });
-            const token = response.data.token;
-            localStorage.setItem('token', token);
           }
           else {
             toast.error(message,{
@@ -48,4 +44,4 @@ const userLoginAction = user => dispatch => {
   );
 };
 
-export default userLoginAction;
+export default addEntry;

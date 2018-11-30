@@ -3,7 +3,7 @@ import AddEntry from '../components/entries/addEntry';
 
 const UserLogin = (props) => (
     <React.Fragment>
-      <AddEntry />
+      <AddEntry {...props} />
     </React.Fragment>
 );
 

@@ -13,11 +13,9 @@ class Register extends Component {
       console.log(this.props),
       <React.Fragment>
         <NavBar />
-        <div className="container">
-          <div className="container-main">
+        <div className="container container-main centered">
             <InfoCard />
             <SignupForm {...this.props}/>
-          </div>
         </div>
       </React.Fragment>
     );

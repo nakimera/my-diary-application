@@ -53,8 +53,7 @@ describe('login reducer', () => {
 const mockStore = configureStore([thunk]);
 const store = mockStore();
 const payload = {
-    email: 'test@test.com',
-    password: 'testpassword',
+    status: 200,
 };
 const url = 'https://my-diary-app-np.herokuapp.com/api/v1/auth/login';
 const expectedData = {

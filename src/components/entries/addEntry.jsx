@@ -9,7 +9,7 @@ class AddEntry extends Component {
         <NavBar />
         <div className="container">
           <div className="container-main">
-            <EntryForm />
+            <EntryForm {...this.props} />
           </div>
         </div>
       </React.Fragment>

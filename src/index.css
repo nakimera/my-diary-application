@@ -17,3 +17,6 @@ a {
   text-decoration: none;
 }
 
+.container-home > div {
+  margin: 5px;
+}
