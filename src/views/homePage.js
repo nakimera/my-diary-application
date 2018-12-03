@@ -1,11 +1,11 @@
 import React from 'react';
 import HomePage from '../components/entries/homePage';
 
-const UserLogin = (props) => (
+const UserHomePage = (props) => (
     <React.Fragment>
       <HomePage />
     </React.Fragment>
 );
 
-export default UserLogin;
+export default UserHomePage;
 

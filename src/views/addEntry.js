@@ -1,10 +1,10 @@
 import React from 'react';
 import AddEntry from '../components/entries/addEntry';
 
-const UserLogin = (props) => (
+const UserEntry = (props) => (
     <React.Fragment>
       <AddEntry {...props} />
     </React.Fragment>
 );
 
-export default UserLogin;
+export default UserEntry;
