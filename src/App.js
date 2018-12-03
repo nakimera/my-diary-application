@@ -8,6 +8,7 @@ import PageNotFound from './views/notFound';
 import './App.css';
 import HomePage from './components/entries/homePage';
 import AddArticle from './components/entries/addEntry';
+import ViewEntry from './components/entries/singleEntry';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={UserLogin} />
             <Route exact path="/homepage" component={HomePage} />
             <Route exact path="/add_entry" component={AddArticle} />
+            <Route exact path="/entry/:id" component={ViewEntry} />
             <Route component={PageNotFound} />
           </Switch>
         </Router>

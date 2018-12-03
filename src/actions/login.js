@@ -1,8 +1,9 @@
 import { LOGIN_USER } from './types';
 import { toast } from 'react-toastify';
+import { baseUrl } from '../global';
 
 const userLoginAction = user => dispatch => {
-  fetch("https://my-diary-app-np.herokuapp.com/api/v1/auth/login", {
+  fetch(baseUrl + 'auth/login', {
     method: "POST",
     headers: {
       "content-type": "application/json"

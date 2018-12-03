@@ -4,9 +4,9 @@ class NavBar extends Component {
   state = {};
   render() {
     return (
-      <div className="nav-bar">
-        <a href="/">
-          <span className="header-brand">My diary</span>
+      <div className='nav-bar'>
+        <a href='/homepage'>
+          <span className='header-brand'>My diary</span>
         </a>
       </div>
     );

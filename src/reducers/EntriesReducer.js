@@ -1,4 +1,4 @@
-import { ADD_ENTRY, FETCH_ENTRIES } from '../actions/types';
+import { ADD_ENTRY, FETCH_ENTRIES, FETCH_ENTRY } from '../actions/types';
 
 const initialState = {
   entry:[],
@@ -12,12 +12,16 @@ export default (state = initialState, action) => {
         entry: action.payload,
       };
       case FETCH_ENTRIES:
-      console.log('my payload', action.payload)
         return{
           ...state,
           entry:action.payload,
           
-        }
+        };
+      case FETCH_ENTRY:
+        return {
+          ...state,
+          entry: action.payload,
+        };
     default:
     return state;
   }
