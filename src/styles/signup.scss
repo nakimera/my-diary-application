@@ -22,7 +22,6 @@ $primary-color: #8b4513;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
 
   .form-auth {
     background-color: $white;
@@ -68,3 +67,8 @@ $primary-color: #8b4513;
     }
   }
 }
+
+.centered {
+    align-items: center;
+  }
+

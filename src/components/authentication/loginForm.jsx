@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
-import userLoginAction from '../../actions/login';
+import { Link } from "react-router-dom";
+import userLoginAction from "../../actions/login";
 
 class LoginForm extends Component {
   state = {
     user: {
       email: "",
-      password: "",
-    },
+      password: ""
+    }
   };
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.user.user.message === "Welcome to your diary nakimeraprossie!") {
-      nextProps.history.push('/homepage');
+    if (nextProps.user.user.status === 200) {
+      window.location = '/homepage';
     }
-
   }
   handleState = e => {
     const name = e.target.name;
@@ -32,10 +31,10 @@ class LoginForm extends Component {
 
   handleLogin = e => {
     const user = {
-        email_address: this.state.user.email,
-        password: this.state.user.password,
+      email_address: this.state.user.email,
+      password: this.state.user.password
     };
-      this.props.userLoginAction(user);
+    this.props.userLoginAction(user);
   };
 
   render() {
@@ -66,10 +65,10 @@ class LoginForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.login,
+  user: state.login
 });
 
 export default connect(
   mapStateToProps,
   { userLoginAction }
-  )(LoginForm);
+)(LoginForm);

@@ -8,6 +8,7 @@ body {
   line-height: 1;
   min-height: 100vh;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 
   .nav-bar {
     background-color: $white;
@@ -32,14 +33,18 @@ body {
   .container {
     width: 100%;
     min-height: calc(100vh - 5em);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
   }
 }
 
-.txt-welcome {
-  color: $primary-color;
-  font-size: 3em;
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.container-home{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }

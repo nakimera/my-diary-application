@@ -1805,6 +1805,11 @@ binary-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
   integrity sha512-DYWGk01lDcxeS/K9IHPGWfT8PsJmbXRtRd2Sx72Tnb8pcYZQFF1oSDb8hJtS1vhp212q1Rzi5dUf9+nq0o9UIg==
 
+blacklist@^1.1.2:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/blacklist/-/blacklist-1.1.4.tgz#b2dd09d6177625b2caa69835a37b28995fa9a2f2"
+  integrity sha1-st0J1hd2JbLKppg1o3somV+povI=
+
 block-stream@*:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
@@ -6323,6 +6328,11 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+medium-editor@^5.10.0:
+  version "5.23.3"
+  resolved "https://registry.yarnpkg.com/medium-editor/-/medium-editor-5.23.3.tgz#6fb638759ae2fc76c423feb056f346d9c518d3b7"
+  integrity sha512-he9/TdjX8f8MGdXGfCs8AllrYnqXJJvjNkDKmPg3aPW/uoIrlRqtkFthrwvmd+u4QyzEiadhCCM0EwTiRdUCJw==
+
 mem@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
@@ -7269,7 +7279,7 @@ parse5@5.1.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
   integrity sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
 
-parse5@^3.0.1:
+parse5@^3.0.1, parse5@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
   integrity sha512-rgO9Zg5LLLkfJF9E6CCmXlSE4UVceloys8JrFqCcHloC3usd/kJCyPDwH2SOlzix2j3xaP9sUX3e8+kvkuleAA==
@@ -8350,6 +8360,11 @@ react-app-polyfill@^0.1.3:
     raf "3.4.0"
     whatwg-fetch "3.0.0"
 
+react-attr-converter@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-attr-converter/-/react-attr-converter-0.3.1.tgz#4a2abf6d907b7ddae4d862dfec80e489ce41ad6e"
+  integrity sha512-dSxo2Mn6Zx4HajeCeQNLefwEO4kNtV/0E682R1+ZTyFRPqxDa5zYb5qM/ocqw9Bxr/kFQO0IUiqdV7wdHw+Cdg==
+
 react-dev-utils@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.1.1.tgz#a07e3e8923c4609d9f27e5af5207e3ca20724895"
@@ -8405,6 +8420,15 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-medium-editor@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/react-medium-editor/-/react-medium-editor-1.8.1.tgz#016ffc3bb82f9364af15f7e43be75d6882555f5a"
+  integrity sha1-AW/8O7gvk2SvFffkO+ddaIJVX1o=
+  dependencies:
+    blacklist "^1.1.2"
+    medium-editor "^5.10.0"
+    object-assign "^4.0.1"
+
 react-redux@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.1.1.tgz#88e368682c7fa80e34e055cd7ac56f5936b0f52f"
@@ -8417,6 +8441,14 @@ react-redux@^5.1.1:
     prop-types "^15.6.1"
     react-is "^16.6.0"
     react-lifecycles-compat "^3.0.0"
+
+react-render-html@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-render-html/-/react-render-html-0.6.0.tgz#1af51d859ed75474435a1c65c293a48e12c36627"
+  integrity sha512-F9Xn8Iy2oJvepMdDrN+XUPOwqv3ni856ikuvu/dyJ2guozN01vF0C55Ja+CQfnziQNlLevSVXzuQKYa/mhyjAQ==
+  dependencies:
+    parse5 "^3.0.2"
+    react-attr-converter "^0.3.1"
 
 react-router-dom@^4.3.1:
   version "4.3.1"
