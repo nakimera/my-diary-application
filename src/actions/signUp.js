@@ -1,9 +1,10 @@
 import { SIGNUP_SUCCESS } from './types';
 import { toast } from 'react-toastify';
+import { baseUrl } from '../global';
 
 const userSignupAction = user => dispatch => {
-  fetch("https://my-diary-app-np.herokuapp.com/api/v1/auth/signup", {
-    method: "POST",
+  fetch(baseUrl + 'auth/signup', {
+    method: 'POST',
     headers: {
       "content-type": "application/json"
     },

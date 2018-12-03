@@ -19,7 +19,8 @@ class HomePage extends Component {
       var getEntries=this.props.entry.data.data
       showEntries=getEntries.map(entry=>(
         <React.Fragment key={entry.entry_id}>
-          <EntryCard 
+          <EntryCard
+          entry_id={entry.entry_id} 
           title={entry.title}
           date={entry.entry_date}
           details={entry.details}

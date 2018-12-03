@@ -72,6 +72,29 @@ $primary-color: saddlebrown;
       font-weight: 800;
       color: $primary-color;
     }
+
+    .body-text {
+      color: black;
+    }
   }
 }
 
+.view-article-card {
+  background-color: white;
+  width: 80%;
+  min-height: 70vh;
+  text-align: left;
+  padding: 50px;
+
+  .article-title {
+    color: saddlebrown;
+    font-size: 1.8em;
+    font-family: "Special Elite", cursive;
+    border-bottom: solid 1px saddlebrown;
+  }
+
+  .article-body {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}

@@ -10,7 +10,6 @@ class Register extends Component {
   }
   render() {
     return (
-      console.log(this.props),
       <React.Fragment>
         <NavBar />
         <div className="container container-main centered">

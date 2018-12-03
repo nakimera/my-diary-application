@@ -1,10 +1,10 @@
 import { ADD_ENTRY } from './types';
 import { toast } from "react-toastify";
-import {token} from '../global';
+import {token, baseUrl} from '../global';
 
 
 const addEntry = entry => dispatch => {
-  fetch('https://my-diary-app-np.herokuapp.com/api/v1/entries', {
+  fetch(baseUrl + 'entries', {
     method: 'POST',
     headers: {
       "content-type": "application/json",

@@ -1,10 +1,10 @@
 import { FETCH_ENTRIES } from './types';
 import { toast } from "react-toastify";
-import {token} from '../global';
+import {token, baseUrl} from '../global';
 
 
 const addEntry = ()=> dispatch => {
-  fetch('https://my-diary-app-np.herokuapp.com/api/v1/entries', {
+  fetch(baseUrl +'entries', {
     method: 'GET',
     headers: {
       'content-type': 'application/json',
@@ -17,7 +17,6 @@ const addEntry = ()=> dispatch => {
         data: data,
       }))
       .then((response) => {
-        // console.log(response.data.data)
           const message = response.data['message']
           if (response.data.message === 'All entries successfully retrieved') {
             toast.success(message,{
