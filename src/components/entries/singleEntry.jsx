@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import renderHTML from 'react-render-html';
 import NavBar from '../common/navBar';
 import AddArticleButton from '../entries/addArticleButton';
 import fetchEntry from '../../actions/fetchEntry';
@@ -18,7 +19,7 @@ class ViewEntry extends Component {
       let details;
       if(this.props.entry.data){
        title = this.props.entry.data.data.title;
-       details = this.props.entry.data.data.details;
+       details = renderHTML(this.props.entry.data.data.details);
       }
     return (
       <React.Fragment>
@@ -26,7 +27,7 @@ class ViewEntry extends Component {
         <div className="container container-home">
             <div className='view-article-card'>
                 <div className='article-title'>
-                    {title}
+                  {title}
                 </div>
                 <div className='article-body'>
                    {details}
