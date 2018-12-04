@@ -6,13 +6,6 @@ import SignUp from '../views/signup';
 import signupReducer from '../reducers/signupReducer';
 
 
-const data = {
-    username: 'prossie',
-    email: 'test@test.com',
-    password: 'testpassword',
-    confirmPassword: 'testpassword',
-}
-
 it("Infocard renders without fail", () => {
   mount(<InfoCard />);
 });
@@ -38,7 +31,12 @@ describe('signup reducer', () => {
           };
         expect(signupReducer(initialState,{
             type: "SIGNUP_SUCCESS",
-            payload: data
+            payload: {
+                username: 'prossie',
+                email: 'test@test.com',
+                password: 'testpassword',
+                confirmPassword: 'testpassword',
+            }
         })).toEqual({
                 user: {
                     username: 'prossie',
@@ -49,7 +47,4 @@ describe('signup reducer', () => {
             })
     })
   });
-
-
-
 

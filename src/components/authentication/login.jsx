@@ -12,7 +12,7 @@ class Login extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <div className='container container-main centered'>
+        <div className="container container-main centered">
             <InfoCard />
             <LoginForm {...this.props} />
           </div>

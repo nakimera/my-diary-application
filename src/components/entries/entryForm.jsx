@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Editor from 'react-medium-editor';
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import addEntry from '../../actions/addEntry';
-
-require('medium-editor/dist/css/medium-editor.css');
-require('medium-editor/dist/css/themes/default.css');
 
 class EntryForm extends Component {
 
@@ -14,7 +11,7 @@ class EntryForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.entry.entry.message === 'Entry successfully added') {
+    if (nextProps.entry.entry.message === "Entry successfully added") {
       nextProps.history.push('/homepage');
     }
   }
@@ -41,16 +38,16 @@ class EntryForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className='article-form'>
+        <div className="article-form">
           <input
-            type='text'
-            placeholder='Add title'
-            name='title'
+            type="text"
+            placeholder="Add title"
+            name="title"
             onChange={this.onChange}
           />
           <Editor
-          className='text-editor'
-          name='details'
+          className="text-editor"
+          name="details"
           onChange={this.handleChange}
           options={{toolbar: {buttons: ['bold', 'italic', 'underline', 'anchor']}}}
         />

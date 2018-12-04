@@ -3,8 +3,8 @@ import { toast } from "react-toastify";
 import {token, baseUrl} from '../global';
 
 
-const getEntries = ()=> dispatch => {
-  return fetch(baseUrl +'entries', {
+const addEntry = ()=> dispatch => {
+  fetch(baseUrl +'entries', {
     method: 'GET',
     headers: {
       'content-type': 'application/json',
@@ -43,4 +43,4 @@ const getEntries = ()=> dispatch => {
   );
 };
 
-export default getEntries;
+export default addEntry;

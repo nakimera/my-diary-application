@@ -4,9 +4,9 @@ import { baseUrl } from '../global';
 
 const userLoginAction = user => dispatch => {
   fetch(baseUrl + 'auth/login', {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'content-type': 'application/json'
+      "content-type": "application/json"
     },
     body: JSON.stringify(user)
   }).then(response =>

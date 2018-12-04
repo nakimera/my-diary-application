@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from '../common/navBar';
+import NavBar from "../common/navBar";
 import InfoCard from './infoCard';
 import SignupForm from './signupForm';
 
@@ -12,7 +12,7 @@ class Register extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <div className='container container-main centered'>
+        <div className="container container-main centered">
             <InfoCard />
             <SignupForm {...this.props}/>
         </div>
