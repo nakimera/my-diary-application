@@ -1,13 +1,13 @@
 import { ADD_ENTRY } from './types';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 import {token, baseUrl} from '../global';
 
 
 const addEntry = entry => dispatch => {
-  fetch(baseUrl + 'entries', {
+  return fetch(baseUrl + 'entries', {
     method: 'POST',
     headers: {
-      "content-type": "application/json",
+      'content-type': 'application/json',
       'access-token': token,
     },
     body: JSON.stringify(entry)

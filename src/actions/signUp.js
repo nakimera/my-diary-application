@@ -3,10 +3,10 @@ import { toast } from 'react-toastify';
 import { baseUrl } from '../global';
 
 const userSignupAction = user => dispatch => {
-  fetch(baseUrl + 'auth/signup', {
+  return fetch(baseUrl + 'auth/signup', {
     method: 'POST',
     headers: {
-      "content-type": "application/json"
+      'content-type': 'application/json'
     },
     body: JSON.stringify(user)
   }).then(response =>
