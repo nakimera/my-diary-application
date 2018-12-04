@@ -1,11 +1,11 @@
 import React from 'react';
 import ViewEntry from  '../components/entries/singleEntry';
 
-const UserEntry = (props) => (
+const Entry = (props) => (
     <React.Fragment>
       <ViewEntry />
     </React.Fragment>
 );
 
-export default UserEntry;
+export default Entry;
 

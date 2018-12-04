@@ -2,7 +2,7 @@ import { FETCH_ENTRY } from './types';
 import {token, baseUrl } from '../global';
 
 const fetchEntry = (id)=> dispatch => {
-  fetch(baseUrl + 'entries/'+id, {
+  return fetch(baseUrl + 'entries/'+id, {
     method: 'GET',
     headers: {
       'content-type': 'application/json',

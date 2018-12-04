@@ -8,6 +8,7 @@ import Login from '../components/authentication/login';
 import NavBar from '../components/common/navBar';
 import loginReducer from '../reducers/loginReducer';
 import * as actions from '../actions/types';
+import * as global from '../global';
 import userLoginAction from '../actions/login';
 
 it('Login page renders without fail', () => {
@@ -19,65 +20,68 @@ it('Login component renders without fail', () => {
 });
 
 it('NavBar component renders without fail', () => {
-    shallow(<NavBar />);
-  });
-  
-describe('login reducer', () => {
-    it('should return the initial state', () => {
-        expect(loginReducer(undefined, {})).toEqual({
-            user: {}
-        })
-    })
+  shallow(<NavBar />);
+});
 
-    it('should handle LOGIN_USER', () => {
-        const initialState = {
-            user: {},
-          };
-        expect(loginReducer(initialState,{
-            type: actions.LOGIN_USER,
-            payload: {
-                email: 'test@test.com',
-                password: 'testpassword',
-            }
-        })).toEqual({
-            user: {
-                    email: 'test@test.com',
-                    password: 'testpassword',
-                }
-            })
-    })
+describe('login reducer', () => {
+  it('should return the initial state', () => {
+    expect(loginReducer(undefined, {})).toEqual({
+      user: {}
+    });
   });
+
+  it('should handle LOGIN_USER', () => {
+    const initialState = {
+      user: {}
+    };
+    expect(
+      loginReducer(initialState, {
+        type: actions.LOGIN_USER,
+        payload: {
+          email: 'test@test.com',
+          password: 'testpassword'
+        }
+      })
+    ).toEqual({
+      user: {
+        email: 'test@test.com',
+        password: 'testpassword'
+      }
+    });
+  });
+});
 
 //   Test login action
 
 const mockStore = configureStore([thunk]);
 const store = mockStore();
 const payload = {
-    status: 200,
+  status: 200
 };
-const url = 'https://my-diary-app-np.herokuapp.com/api/v1/auth/login';
+const url = global.baseUrl + 'auth/login';
 const expectedData = {
-    "email": "test@test.com", "password": "testpassword",
-}
+  email: 'test@test.com',
+  password: 'testpassword'
+};
 const flushAllPromises = () => new Promise(resolve => setImmediate(resolve));
 
 describe('login actions', () => {
-
   beforeEach(() => {
-      store.clearActions();
+    store.clearActions();
   });
-})
+});
 
-describe ('userLoginAction', () => {
-    it('Dispatches the correct action and payload', async () => {
-      const expectedActions = [{
-        type: actions.LOGIN_USER, 
-        payload: payload,
-      }];
-      fetchMock.post(url, expectedData);
-      store.dispatch(userLoginAction(payload));
-      await flushAllPromises();
-      expect(store.getActions()).toEqual(expectedActions);
-    });
-    
-})
+describe('userLoginAction', () => {
+  it('Dispatches the correct action and payload', async () => {
+    const expectedActions = [
+      {
+        type: actions.LOGIN_USER,
+        payload: payload
+      }
+    ];
+    fetchMock.post(url, expectedData);
+    store.dispatch(userLoginAction(payload));
+    await flushAllPromises();
+    expect(store.getActions()).toEqual(expectedActions);
+  });
+});
